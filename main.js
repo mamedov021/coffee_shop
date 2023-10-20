@@ -1,11 +1,10 @@
-let  toggle_btn = document.querySelector('.toggle_btn');
-let drop_down  = document.querySelector('.drop_down' );
+let toggle_btn = document.querySelector('.toggle_btn');
+let drop_down = document.querySelector('.drop_down');
 
-toggle_btn.addEventListener('click', ()=>{
-drop_down.classList.toggle( 'fixed ')
-})
+toggle_btn.addEventListener('click', () => {
+drop_down.classList.toggle('hidden');
+});
 
- 
 
 const items = [
     {
