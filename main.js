@@ -3,74 +3,43 @@ let drop_down = document.querySelector('.drop_down');
 
 toggle_btn.addEventListener('click', () => {
 drop_down.classList.toggle('hidden');
+
 });
 
 
-const items = [
-    {
-        position: 0,
-        el: document.getElementById('carousel-item-1')
-    },
-    {
-        position: 1,
-        el: document.getElementById('carousel-item-2')
-    },
-    {
-        position: 2,
-        el: document.getElementById('carousel-item-3')
-    },
-    {
-        position: 3,
-        el: document.getElementById('carousel-item-4')
-    },
-];
+document.addEventListener("DOMContentLoaded", function() {
+    // Get elements
+    const carousel = document.getElementById("default-carousel");
+    const items = carousel.querySelectorAll("[data-carousel-item]");
+    const indicators = carousel.querySelectorAll("[data-carousel-slide-to]");
+    const prevButton = carousel.querySelector("[data-carousel-prev]");
+    const nextButton = carousel.querySelector("[data-carousel-next]");
 
-const options = {
-    defaultPosition: 1,
-    interval: 3000,
-    
-    indicators: {
-        activeClasses: 'bg-white dark:bg-gray-800',
-        inactiveClasses: 'bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800',
-        items: [
-            {
-                position: 0,
-                el: document.getElementById('carousel-indicator-1')
-            },
-            {
-                position: 1,
-                el: document.getElementById('carousel-indicator-2')
-            },
-            {
-                position: 2,
-                el: document.getElementById('carousel-indicator-3')
-            },
-            {
-                position: 3,
-                el: document.getElementById('carousel-indicator-4')
-            },
-        ]
-    },
-    
-    // callback functions
-    onNext: () => {
-        console.log('next slider item is shown');
-    },
-    onPrev: ( ) => {
-        console.log('previous slider item is shown');
-    },
-    onChange: ( ) => {
-        console.log('new slider item has been shown');
+    // Initialize current slide index
+    let currentSlide = 0;
+
+    // Function to show the current slide
+    function showSlide(index) {
+        items.forEach(item => item.classList.add("hidden"));
+        items[index].classList.remove("hidden");
+
+        indicators.forEach(indicator => indicator.setAttribute("aria-current", "false"));
+        indicators[index].setAttribute("aria-current", "true");
     }
-};
 
-const $prevButton = document.getElementById('data-carousel-prev');
-const $nextButton = document.getElementById('data-carousel-next');
+    // Function to go to the previous slide
+    function goToPreviousSlide() {
+        currentSlide = (currentSlide - 1 + items.length) % items.length;
+        showSlide(currentSlide);
+    }
 
-$prevButton.addEventListener('click', () => {
-    carousel.prev();
-});
+    // Function to go to the next slide
+    function goToNextSlide() {
+        currentSlide = (currentSlide + 1) % items.length;
+        showSlide(currentSlide);
+    }
 
-$nextButton.addEventListener('click', () => {
-    carousel.next();
+    // Add event listeners to the buttons
+    prevButton.addEventListener("click", goToPreviousSlide);
+    nextButton.addEventListener("click", goToNextSlide);
 });
