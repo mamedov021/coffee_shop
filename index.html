@@ -9,11 +9,11 @@
 </head>
 <body>
   
-    <div class="navbar w-full    ">
+    <div class="navbar w-full  my-3 ">
       <ul class="text-yellow-600 items-center  flex justify-around   font-weight:800 text-xl  "> 
         <li class="text-green-800   align-middle max-[600px]:hidden ">HOME</li>
         <li class="max-[600px]:hidden">PRODUCTS </li>
-        <li><img src="/6881729__1_-removebg 1.png" alt=""></li>
+        <li><img src="/6881729__1_-removebg 1.png" alt="" class="h-24"></li>
         <li class=" flex  max-[600px]:hidden">ABOUT US <img src="/down-arrow (1) 2.png" alt=""></li>
         <li class=" flex max-[600px]:hidden">ACCOUNT <img src="/down-arrow (1) 2.png"></li>
         <div class=" toggle_btn cursor-pointer  hidden max-[600px]:flex  "> <i class="fa-solid fa-bars"></i>  </div>
@@ -28,52 +28,117 @@
   
       
     </div>
-  <div class="container">
-    <div class="max-w-2xl m-auto">
-      <div id="default-carousel" class="relative mb-4 mt-4 ml-4" data-carousel="static">
-        <!-- Carousel wrapper -->
-        <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
-             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  1
-                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-                <img src="/media/Rectangle 3.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-            </div>
-            <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            
-                <img src="/media/Rectangle 2.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/media/Rectangle 1.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-            </div>
-        </div>
-        <!-- Slider indicators -->
-        <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        </div>
-        <!-- Slider controls -->
-        <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                <span class="hidden">Previous</span>
-            </span>
-        </button>
-        <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                <span class="hidden">Next</span>
-            </span>
-        </button>
-    </div>
-      <p class="ml-4">This carousel component is part of the <a class="text-blue-600 hover:underline" href="https://flowbite.com/docs/components/carousel/" target="_blank">Flowbite component library.</a></p>
-    </div>
  
+    <div class="  mt-5px" >
 
-  </div>
+      <div id="default-carousel" class="relative" data-carousel="static">
+            <!-- Carousel wrapper -->
+            <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                     <img src="/media/Rectangle 3.png" class="block relative top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 " alt="...">
+                     <div class="info absolute     top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <h1 class=" text-white  my-2 text-6xl">ORGANIC TASTE</h1>
+                      <p class="text-neutral-300 text-xl">All our products are made without chemical substances, certain</p>
+                      <p class="text-neutral-300 text-xl ">additives, pesticides and herbicides</p>
+                     </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                  <img src="/media/Rectangle 2.png" class="block relative top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 " alt="...">
+                  <div class="info absolute     top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                   <h1 class=" text-white  my-2 text-6xl">FRIENDLY STAFF</h1>
+                   <p class="text-neutral-300 text-xl">All members of our team are both professional and smiling.</p>
+                   <p class="text-neutral-300 text-xl ">smiling</p>
+                  </div>
+             </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                  <img src="/media/Rectangle 1.png" class="block relative top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 " alt="...">
+                  <div class="info absolute     top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                   <h1 class=" text-white  my-2 text-6xl">FAST DELIVERY</h1>
+                   <p class="text-neutral-300 text-xl">All the orders are delivered to customers no later than 1 hour.</p>
+                   <p class="text-neutral-300 text-xl ">1hour</p>
+                  </div>
+             </div>
+            </div>
+            <!-- Slider indicators -->
+             
+            <!-- Slider controls -->
+            <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <span class="hidden">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <span class="hidden">Next</span>
+                </span>
+            </button>
+        </div>
+
+        .
+    
+      <!-- <p class="mt-5">This carousel slider component is part of a larger, open-source library of Tailwind CSS components. Learn
+        more
+        by going to the official <a class="text-blue-600 hover:underline"
+          href="https://flowbite.com/docs/getting-started/introduction/" target="_blank">Flowbite Documentation</a>.
+      </p> -->
+        <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    </div>
+
+    <div class="container  ">
+      <div class="col-1 flex">
+       <div class="coffee" >
+          <img src="/media/Espresso_Coffee_PNG_Picture 1.png" alt="">
+          <div class="info">
+             <div class="name">espresso</div>
+             <div class="price">$2.50</div>
+          </div>
+       </div>
+       <div class="coffee">
+        <img src="/media/360_F_535052569_j3rrbZ37AciLilRZlsWbOKzHSpkWgXhb 1.png" alt="">
+        <div class="info">
+           <div class="name">americano</div>
+           <div class="price">$2.80</div>
+        </div>
+     </div>
+     <div class="coffee">
+      <img src="/media/istockphoto-104697449-612x612 1.png" alt="">
+      <div class="info">
+         <div class="name">macchiato</div>
+         <div class="price">$3.40</div>
+      </div>
+     </div>
+    </div>
+<div class="col-2 flex">
+   <div class="coffee">
+    <img src="/media/cappuccino_PNG49 1.png" alt="">
+    <div class="info">
+       <div class="name">cappuccino</div>
+       <div class="price">$4.20</div>
+    </div>
+ </div>
+ <div class="coffee">
+   <img src="/media/istockphoto-900606940-612x612 1.png" alt="">
+   <div class="info">
+      <div class="name">latte</div>
+      <div class="price">$4</div>
+   </div>
+</div>
+<div class="coffee">
+   <img src="/media/pngegg 1.png" alt="">
+   <div class="info">
+      <div class="name">mocha</div>
+      <div class="price">$5.10</div>
+   </div>
+</div>
+</div>
+        
+</div>
+
 
 <script src="main.js">
   
